@@ -1,0 +1,68 @@
+Example 1
+int main(){
+	int age = 0;
+	printf("input your age:");
+	scanf("%d",&age);
+	printf("You are %d years old.\n",age);
+	return 0;
+Example 2 
+int res(int a, int b,int c){
+	c = a % b;
+	return c;
+}
+int main(){
+	int  a = 0;
+	int  b = 0;
+	int  c = 0;
+	scanf("%d",&a);
+	scanf("%d",&b);
+	printf("mnacord erku tveri bajanumic heto: %d\n",res(a,b,c));
+	return 0;
+}
+Example 3 
+int function(int x){
+	return  (4 * x + 21 * x * x - 12);
+}
+int main(){
+	int x = 0;
+	printf("input number: ");
+	scanf("%d",&x);
+	printf("result: %d\n",function(x));
+	return 0;
+}
+Example 4 
+int main(){
+	float a = 0;
+	float b = 0;
+	float c = 0;
+	scanf("%f",&a);
+	scanf("%f",&b);
+	scanf("%f",&c);
+	float res = (a + b + c)/3;
+	printf("result: %.2f\n",res);
+	return 0;
+}
+Example 5 
+float Fahrenheit(float Celsius){
+	float fahrenheit = (Celsius * 9/5) + 32;
+	return fahrenheit;
+}
+int main(){
+	float Celsius = 0;
+	scanf("%f",&Celsius);
+	printf("result: %.2f",Fahrenheit(Celsius));
+	return 0;
+}
+Example. 6
+int main(){
+	float a = 0;
+	float b = 0;
+	printf("input float number1: ");
+	scanf("%f",&a);
+	printf("input float number2: ");
+	scanf("%f",&b);
+	float res = a * b;
+	printf("result: %.3f\n",res);
+	return 0;
+}
+

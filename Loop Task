@@ -1,0 +1,79 @@
+Example 1 
+void function(int n){
+	for(int i = 1; i <= 10; ++i){
+		printf("%d * %d = %d\n",n,i,n*i);
+	}
+}
+int main(){
+	int n = 0;
+	scanf("%d",&n);
+	function(n);
+	return 0;	
+}
+Example 2
+int main(){
+	int n = 0;
+	scanf("%d",&n);
+	int res = 0;
+	while(n){
+		res = res * 10 + n % 10;
+		n = n / 10;
+	}
+	printf("result: %d\n",res);
+	return 0;
+}
+Example 3
+int main(){
+	int n = 0;
+	scanf("%d",&n);
+	int res = 0;
+	while(n){
+		res = res * 10 + n % 10;
+		n = n / 10;
+	}
+	printf("result: %d\n",res);
+	return 0;
+}
+
+Example 4
+int main(){
+	int n = 0;
+	int a = 15;
+	printf("Number based at0-100 \n");
+	while(1){
+		scanf("%d",&n);
+		if(n == a){
+			printf("Congrats you found:\n");
+			return 0;
+		}else{
+			printf("Try one more time:\n");
+		}
+	}
+	return 0;
+Example 5
+int main(){
+	int n = 0;
+	scanf("%d",&n);
+	for(int i = 1; i <= n; i++){
+		for(int j = 0; j < i; j++){
+			printf("%d",i);
+		}
+		printf("\n");
+	}
+	return 0; 
+}
+Example 6
+int main(){
+	int a = 0;
+	int b = 0;
+	printf("Input the  number: ");
+	scanf("%d",&a);
+	printf("Input a digre: ");
+	scanf("%d",&b);
+	int res = 1;
+	for(int i = 0; i < b; i++){
+		res *= a;
+	}
+	printf("result: %d\n",res);
+	return 0;
+}

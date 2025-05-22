@@ -1,0 +1,123 @@
+Example 1 
+int power (int  num, int exp){
+    int res = 1;
+    for(int i = 0; i < exp; i++){
+        res = res * num;
+    }
+    return res;
+}
+int main(){
+    int num = 5;
+    int exp = 2;
+    printf("result: %d\n",power(num,exp));
+    return 0;
+}
+Example 2
+int revers(int num){
+    int a = 0;
+    while(num){
+        a = a * 10 + num % 10;
+        num = num / 10;
+    }
+    return a;
+}
+int add(int num){
+    return num + revers(num);
+}
+int polimdrom(int num,int count){
+    while(num != revers(num)){
+        count++;
+        num = add(num);
+    }
+    return count;
+}
+int main(){
+    int num = 87;
+    int count = 0;
+    printf("result: %d\n",polimdrom(num,count));
+    return 0;
+
+}
+
+Example 3
+int function(int *arr,int n){
+    for(int i = 0; i < sizeof(arr); ++i){
+        if(arr[i] == n){
+            return 1;
+        }
+    }
+    return 0;
+}
+int main(){
+    int arr[] = {1,2,3,4,5,6,7};
+    int n = 9;
+    int res = function(arr,n);
+    if(res){
+        printf("Yes have:\n");
+    }else{
+        printf("No: \n");
+    }
+    return 0;
+
+Example 4
+int function(int count,int n){
+    for(int i = 0; i < 32; i++){
+        if(n & (1 << i)){
+            count++;
+        }
+    }
+    return count;
+}
+int main(){
+    int count = 0;
+    int n = 5;
+    printf("result: %d\n",function(count,n));
+    return 0;
+}
+Example 5 
+int function(int n){
+    int a = 0;
+    int b = 1;
+    int res = 0;
+    if(n == 0){
+        return a;
+    }else if(n == 1){
+        return b;
+    }else{
+        for(int i = 2; i <= n; i++){
+            res = a + b;
+            a = b;
+            b = res;
+        }
+    }
+    return b;
+}
+int main(){
+    int n = 0;
+    scanf("%d",&n);
+    printf("resuly: %d\n",function(n));
+    return 0;
+
+}
+Example 6
+int function(int *arr,int size){
+    for(int i = 0; i < size; i++){
+        int flag = 1;
+        for(int j = 1; j <= i; j++){
+            if(i != j && arr[i] == arr[j]){
+                flag = 0;
+                break;
+            }
+        }
+        if(flag){
+            return arr[i];
+        }
+    }
+    return -1;
+}
+int main(){
+    int arr[] = {1,2,1,2,4,4,5,6,6};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    printf("result: %d\n",function(arr,size));
+    return 0;
+

@@ -1,0 +1,101 @@
+Array example 1 
+
+int main(){
+	int arr[] = {1,2,3,4,5};
+	int max = arr[0];
+	int index = 0;
+	for(int i = 0; i < 5; i++){
+		if(max < arr[i]){
+			max = arr[i];
+			index = i;
+		}
+	}
+	printf("%d\n",index);
+	return 0
+}
+
+Array example 2 
+
+int main(){
+	int max = 0;
+	int min = 0;
+	int arr[] = {2,5,8,-1,6,4,9,7};
+	max = arr[0];
+	min = arr[0];
+	for(int i = 0; i < 10; i++){
+		if(max < arr[i]){
+			max = arr[i];
+		}else if(min > arr[i]){
+			min = arr[i];
+		}
+	}
+	printf("result: %d\n",max + min);
+	return 0;
+}
+
+Array Example 3 
+
+int main(){
+	int arr[] = {1,2,3};
+	int arr1[] = {4,5,6};
+	for(int i = 0; i < 3; ++i){
+		printf("%d ",arr[i] * arr1[i]);
+	}
+	printf("\n");
+	return 0;	
+}
+
+Array Example 4 
+int main(){
+	int arr[] = {1,2,3,4,5};
+	int n = 0;
+	scanf("%d",&n);
+	for(int i = 0; i < 5; ++i){
+		if(arr[i] == n){
+			printf("YES\n");
+			return 0;
+		}
+	}
+	printf("NO\n");
+	return 0;
+}
+
+Array Example 5
+int function(int *arr, int count){
+    for(int i = 0; i < 8; i++){
+        if(arr[i] % 2 == 1){
+            count++;
+        }
+    }
+    return count;
+}
+int main(){
+    int arr[] = {1,2,4,5,6,7,8,9};
+    int count = 0;
+    printf("in array have odd: %d\n",function(arr,count));
+    return 0;
+}
+Array Example 6
+int function(int *arr,int number){
+    int a = 0;
+    for(int i = 1; i < 10; ++i){
+        for(int j = 1; j < 10; ++j){
+            if(i == arr[j]){
+               a = 1;
+              break; 
+            }
+        }
+        if(a){
+            a = 0;
+        }else{
+            number = i;
+        }
+    }
+    return number;
+}
+int main(){
+    int arr[] = {1,2,5,4,6,3,9,8};
+    int number = 0;
+    printf("in array dont has: %d\n",function(arr,number));
+    return 0;
+}
